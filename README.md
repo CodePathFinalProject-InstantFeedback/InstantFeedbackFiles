@@ -36,6 +36,7 @@ An application for professors and mentors to see instant feedback given by stude
 * Students and Professors login to the app. 
 * Professors can add a course, and assignments within it. 
 * Students can register for the available courses. 
+* Professor and students can view their courses.
 * Students can provide a rating in five stars for all the added assignment.  
 * Professors can see the feedback as the average number of stars for each assignment.
 
@@ -54,15 +55,17 @@ An application for professors and mentors to see instant feedback given by stude
    * 
 * Creation - User can create a new resource
    * Professors can add a course, and assignments within it. 
+   * Students can register for the available courses. 
    
 * Stream - User can scroll through important resources in a list
-    * Students can register for the available courses. 
-    * Students can provide a rating in five stars for all the added assignment.
+   * Professor and students can view their courses.
+   
 
 * Profile - User can view their identity and stats
    
 * Detail- User can view the detail of particular resource. 
-    *  Professors can see the feedback as the average number of stars for each assignment of a              course.
+    *  Professors can see the feedback as the average number of stars for each assignment of a course.
+     * Students can provide a rating in five stars for all the added assignment.
 
 ### 3. Navigation
 
