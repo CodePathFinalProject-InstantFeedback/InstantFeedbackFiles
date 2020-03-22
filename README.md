@@ -24,8 +24,7 @@ An application for professors and mentors to see instant feedback given by stude
 
 - **Habit:** Teachers/Professors will be using this after every assignment to get feedback, and make adjustment if needed to the next assignment. Students will be required to provide feedback at the end of every assignment.
 
-- **Scope:** Version 1 will allow professors, and teachers to add a course and assignments, and students to keep track fo that specific course. Version 2 will allow students to rate the assignments, and professors to view the feedback. Version 3 will graph, and make visualization based on the data.
-- Version 4 will have machine learning/sentiment analysis, to allow textual feedback, and its analysis. 
+- **Scope:** Version 1 will allow professors, and teachers to add a course and assignments, and students to keep track fo that specific course. Version 2 will allow students to rate the assignments, and professors to view the feedback. Version 3 will graph, and make visualization based on the data. Version 4 will have machine learning/sentiment analysis, to allow textual feedback, and its analysis. 
 
 ## Product Spec
 
