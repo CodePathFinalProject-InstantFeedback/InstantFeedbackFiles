@@ -135,6 +135,27 @@ An application for professors and mentors to see instant feedback given by stude
    
    
 ### Networking
-- [Add list of network requests by screen ]
-- [Create basic snippets for each Parse network request]
-- [OPTIONAL: List endpoints if using existing API such as Yelp]
+   - Home Feed Screen
+      - (Read/GET) Query all the courses for the User  
+         ```swift
+         let query = PFQuery(className:"Course")
+         query.whereKey("author", equalTo: currentUser)
+         query.findObjectsInBackground { (courses: [PFObject]?, error: Error?) in
+            if let error = error { 
+               print(error.localizedDescription)
+            } else if let courses = courses {
+               print("Successfully retrieved \(courses.count) courses.")
+           // TODO: Do something with posts...
+            }
+         }
+         ```
+      - (Create/POST) Create a new like on a post
+      - (Delete) Delete existing like
+      - (Create/POST) Create a new comment on a post
+      - (Delete) Delete existing comment
+   - Create Post Screen
+      - (Create/POST) Create a new post object
+   - Profile Screen
+      - (Read/GET) Query logged in user object
+      - (Update/PUT) Update user profile image
+
