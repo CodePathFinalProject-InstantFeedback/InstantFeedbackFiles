@@ -101,22 +101,39 @@ An application for professors and mentors to see instant feedback given by stude
 ## Schema 
 
 ### Models
+
+### Course 
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | CourseName      | String   | unique id for the course (default field) |
+   | Author       | Pointer to Professor| sets professor for the course |
+   | Students       | List of Pointers to Students     | Tracks students who are taking the course  |
+   | CourseDescription       | String   | Description of the course |
+   | Assignments | List of Pointers to assignments   | Objectives assigned to students in a class |
+   | AssignmentDescription    | String   | Description of the assignment |
+   
 #### User 
 
    | Property      | Type     | Description |
    | ------------- | -------- | ------------|
-   | objectId      | String   | unique id for the user post (default field) |
-   | author        | Pointer to User| image author |
-   | image         | File     | image that user posts |
-   | caption       | String   | image caption by author |
-   | commentsCount | Number   | number of comments that has been posted to an image |
-   | likesCount    | Number   | number of likes for the post |
-   | createdAt     | DateTime | date when post is created (default field) |
-   | updatedAt     | DateTime | date when post is last updated (default field) |
+   | UserName      | String   | unique id for the course (default field) |
+   | UserEmail       | String  | user email used to sign-in |
+   | Password       | String   | User password |
+   | UserType | String   | Professor or Student Defined |
+   | Courses | List of pointers    | all the courses affiliated with the user (List of pointers to Courses) |
+
+
+#### Assignment 
+
+   | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | AssignmentName      | String   | Name of the assignment |
+   | Course     | Pointer to Course |  course with the assignments  
+   | Rating       | Number     | Rating of the assignment  |
+   | AssignmentDescription       | String   | Description of the Assignment
    
    
-### Models
-[Add table of models]
 ### Networking
 - [Add list of network requests by screen ]
 - [Create basic snippets for each Parse network request]
