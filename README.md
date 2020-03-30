@@ -60,7 +60,6 @@ An application for professors and mentors to see instant feedback given by stude
 * Stream - User can scroll through important resources in a list
    * Professor and students can view their courses.
    
-
 * Profile - User can view their identity and stats
    
 * Detail- User can view the detail of particular resource. 
@@ -135,7 +134,7 @@ An application for professors and mentors to see instant feedback given by stude
    
    
 ### Networking
-   - Home Feed Screen
+   - Stream Screen
       - (Read/GET) Query all the courses for the User  
          ```swift
          let query = PFQuery(className:"Course")
@@ -149,7 +148,26 @@ An application for professors and mentors to see instant feedback given by stude
             }
          }
          ```
-      - (Create/POST) Create a new like on a post
+      - (Create/POST) Create a new course 
+         ```swift Post post=new  Post();
+        post.setKeyDescription(description);
+        post.setKeyUser(currentUser);
+        post.setKeyImage(new ParseFile(photoFile));
+        post.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e!=null)
+                {
+                    Log.e(TAG,"Error while saving",e);
+                    Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG,"post was succesful");
+                Description.setText("");
+                ivPostImage.setImageResource(0);
+
+            }  
+        });```
+      
       - (Delete) Delete existing like
       - (Create/POST) Create a new comment on a post
       - (Delete) Delete existing comment
