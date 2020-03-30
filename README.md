@@ -195,7 +195,8 @@ An application for professors and mentors to see instant feedback given by stude
      
     - Register
       -(Create/POST) Create a new user 
-       ```swift User user=new User();
+       ```swift 
+           User user=new User();
            user.setUserName();
            user.setPassword();
            user.saveInBackground(new SaveCallback() {
