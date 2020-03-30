@@ -191,13 +191,23 @@ An application for professors and mentors to see instant feedback given by stude
                 Description.setText("");
             }  
         });```
+     
+    - Register
+      -(Create/POST) Create a new user 
+       ```swift User user=new User();
+         user.setUserName();
+         user.setPassword();
+         user.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e!=null)
+                {
+                    Log.e(TAG,"Error while saving",e);
+                    Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG,"post was succesful");
+                Description.setText("");
+            }  
+        });```
       
-      - (Delete) Delete existing like
-      - (Create/POST) Create a new comment on a post
-      - (Delete) Delete existing comment
-   - Create Post Screen
-      - (Create/POST) Create a new post object
-   - Profile Screen
-      - (Read/GET) Query logged in user object
-      - (Update/PUT) Update user profile image
 
