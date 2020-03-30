@@ -176,38 +176,39 @@ An application for professors and mentors to see instant feedback given by stude
 
   - Creation Screen 
       - (Create/POST) Create a new course 
-         ```swift Course course=new  Course();
-        course.setKeyDescription(description);
-         course.setKeyUser(currentUser);
-         course.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e!=null)
-                {
-                    Log.e(TAG,"Error while saving",e);
-                    Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
-                }
-                Log.i(TAG,"post was succesful");
-                Description.setText("");
-            }  
-        });```
+         ```swift 
+             Course course=new  Course();
+             course.setKeyDescription(description);
+             course.setKeyUser(currentUser);
+             course.saveInBackground(new SaveCallback() {
+                @Override
+                public void done(ParseException e) {
+                    if(e!=null)
+                    {
+                        Log.e(TAG,"Error while saving",e);
+                        Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
+                    }
+                    Log.i(TAG,"post was succesful");
+                    Description.setText("");
+                  }  
+               });```
      
     - Register
       -(Create/POST) Create a new user 
        ```swift User user=new User();
-         user.setUserName();
-         user.setPassword();
-         user.saveInBackground(new SaveCallback() {
-            @Override
-            public void done(ParseException e) {
-                if(e!=null)
-                {
-                    Log.e(TAG,"Error while saving",e);
-                    Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
-                }
-                Log.i(TAG,"post was succesful");
-                Description.setText("");
-            }  
-        });```
+           user.setUserName();
+           user.setPassword();
+           user.saveInBackground(new SaveCallback() {
+              @Override
+              public void done(ParseException e) {
+                  if(e!=null)
+                  {
+                      Log.e(TAG,"Error while saving",e);
+                      Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
+                  }
+                  Log.i(TAG,"post was succesful");
+                  Description.setText("");
+              }  
+          });```
       
 
