@@ -148,7 +148,8 @@ An application for professors and mentors to see instant feedback given by stude
             }
          }```
     - (Add/Edit) course from the existing course for the User=Student. 
-             ```swift let query = PFQuery(className:"User")
+             ```swift 
+             let query = PFQuery(className:"User")
               query.whereKey("author", equalTo: currentUser)
               query.findObjectsInBackground { (courses: [PFObject]?, error: Error?) in
               if let error = error { 
