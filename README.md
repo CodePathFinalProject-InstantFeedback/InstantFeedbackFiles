@@ -146,8 +146,34 @@ An application for professors and mentors to see instant feedback given by stude
                print("Successfully retrieved \(courses.count) courses.")
            // TODO: Do something with posts...
             }
-         }
-         ```
+         }```
+    - (Add/Edit) course from the existing course for the User=Student. 
+             ```swift let query = PFQuery(className:"User")
+              query.whereKey("author", equalTo: currentUser)
+              query.findObjectsInBackground { (courses: [PFObject]?, error: Error?) in
+              if let error = error { 
+                 print(error.localizedDescription)
+                } else if let courses = courses {
+                 print("Successfully retrieved \(courses.count) courses.")
+               // TODO: Do something with posts...
+                 }
+               }
+               courses.add(Course course) 
+               currentUser.setKeyCourse(courses)
+               currentUser.saveInBackground(new SaveCallback() {
+            @Override
+            public void done(ParseException e) {
+                if(e!=null)
+                {
+                    Log.e(TAG,"Error while saving",e);
+                    Toast.makeText(getContext(), "Error while saving", Toast.LENGTH_SHORT).show();
+                }
+                Log.i(TAG,"post was succesful");
+                Description.setText("");
+            }  });```
+        
+
+  - Creation Screen 
       - (Create/POST) Create a new course 
          ```swift Course course=new  Course();
         course.setKeyDescription(description);
