@@ -149,11 +149,10 @@ An application for professors and mentors to see instant feedback given by stude
          }
          ```
       - (Create/POST) Create a new course 
-         ```swift Post post=new  Post();
-        post.setKeyDescription(description);
-        post.setKeyUser(currentUser);
-        post.setKeyImage(new ParseFile(photoFile));
-        post.saveInBackground(new SaveCallback() {
+         ```swift Course course=new  Course();
+        course.setKeyDescription(description);
+         course.setKeyUser(currentUser);
+         course.saveInBackground(new SaveCallback() {
             @Override
             public void done(ParseException e) {
                 if(e!=null)
@@ -163,8 +162,6 @@ An application for professors and mentors to see instant feedback given by stude
                 }
                 Log.i(TAG,"post was succesful");
                 Description.setText("");
-                ivPostImage.setImageResource(0);
-
             }  
         });```
       
