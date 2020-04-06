@@ -18,7 +18,7 @@ An application for professors and mentors to see instant feedback given by stude
 ### App Evaluation
 [Evaluation of your app across the following attributes]
 - **Category:** Academics 
-- **Mobile:** Mobile is essential for istant feedback as it is protable, and user friendly. App that allows students to log in to accounts and give feedback to particular classes. Professors get the aggregate results and use the data to alter the course of the class.
+- **Mobile:** Mobile Phones are essential for instant feedback as it is protable, and user friendly. App that allows students to log in to accounts and give feedback to particular classes. Professors get the aggregate results and use the data to alter the course of the class.
 - **Story:** In many colleges, students are required to give feedback about a course at the end of the semester. This feedback does not help to know about students view on the course during the semester which could allow to make changes and adjustments accordingly. Thus, we thought about making a rating based review app for all assignments in the course so that the instructor can keep track of student responses, and make improvements accordingly throughout the semster.  
 
 - **Market:** Our primary customers will be schools from K-12, and universities that want to know about students' view on the course during the semester. This could also be a valuable asset for the education ministry to make certain changes after analyzing the data over the course of a particular time period. 
