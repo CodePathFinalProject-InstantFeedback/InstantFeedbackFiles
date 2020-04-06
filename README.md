@@ -8,7 +8,7 @@ CS:Wait Codepath Project - README Template
 1. [Product Specifications](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
-2. [VideoWalkthroughs](#sprintsAllVideoWalkthroughs)
+2. [VideoWalkthroughs](#VideoWalkthroughs)
 
 ## Overview
 ### Description
