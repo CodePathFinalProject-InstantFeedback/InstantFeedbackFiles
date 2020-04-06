@@ -217,5 +217,6 @@ An application for professors and mentors to see instant feedback given by stude
 
 ## Sprint 1 
 Here's a walkthrough of implemented user stories in our first sprint. 
+
 <img src='instantFeedbackSprint1Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
