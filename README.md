@@ -32,11 +32,11 @@ An application for professors and mentors to see instant feedback given by stude
 
 **Required Must-have Stories**
 
-* Students and Professors can create an account.
-* Students and Professors login to the app. 
-* Professors can add a course, and assignments within it. 
-* Students can register for the available courses. 
-* Professor and students can view their courses.
+* [x] Students and Professors can create an account.
+* [x] Students and Professors login to the app. 
+* [x] Professors can add a course, and assignments within it. 
+*  Students can register for the available courses. 
+*  Professor and students can view their courses.
 * Students can provide a rating in five stars for all the added assignment.  
 * Professors can see the feedback as the average number of stars for each assignment.
 
