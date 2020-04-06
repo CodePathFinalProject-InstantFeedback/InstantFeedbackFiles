@@ -8,7 +8,7 @@ CS:Wait Codepath Project - README Template
 1. [Product Specifications](#Product-Spec)
 1. [Wireframes](#Wireframes)
 2. [Schema](#Schema)
-2. [Sprints All Video Walkthrough](#sprintsAllVideoWalkthroughs)
+2. [VideoWalkthroughs](#sprintsAllVideoWalkthroughs)
 
 ## Overview
 ### Description
@@ -214,7 +214,7 @@ An application for professors and mentors to see instant feedback given by stude
           });```
       
       
-## Sprints All Video Walkthrough
+## VideoWalkthroughs
 
 ## Sprint 1 
 Here's a walkthrough of implemented user stories in our first sprint. 
