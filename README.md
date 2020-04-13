@@ -36,15 +36,16 @@ An application for professors and mentors to see instant feedback given by stude
 * [x] Students and Professors can create an account.
 * [x] Students and Professors login to the app. 
 * [x] Professors can add a course, and assignments within it. 
-*  Students can register for the available courses. 
-*  Professor and students can view their courses.
-* Students can provide a rating in five stars for all the added assignment.  
-* Professors can see the feedback as the average number of stars for each assignment.
+* [x] Students can provide a rating in five stars for all the added assignment.  
+* [x] Professors can see the feedback as the average number of stars for each assignment.
+*     Students can register for the available courses. 
+*     Professor and students can view their courses.
+
 
 **Optional Nice-to-have Stories**
 
 * Make real time graph, and charts based on student feedback.
-* Implement sentiment analysis/machine learning/NLP so that student  can provide feedback in       paragraph. 
+* Implement sentiment analysis/machine learning/NLP so that student  can provide feedback in paragraph. 
 
 ### 2. Screen Archetypes
 
