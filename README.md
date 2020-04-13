@@ -224,7 +224,7 @@ Here's a walkthrough of implemented user stories in our first sprint.
 ## Sprint 2
 Here's a walkthrough of implemented user stories in our first sprint. 
 
-<img src='instantFeedbackSprint1Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='instantfeedbackSprint2Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
