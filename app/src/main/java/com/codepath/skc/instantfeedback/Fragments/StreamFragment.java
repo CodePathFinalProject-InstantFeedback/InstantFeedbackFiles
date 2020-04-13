@@ -1,6 +1,7 @@
 package com.codepath.skc.instantfeedback.Fragments;
 
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,7 +14,9 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
+import com.codepath.skc.instantfeedback.AssignmentsActivity;
 import com.codepath.skc.instantfeedback.CoursesAdapter;
 import com.codepath.skc.instantfeedback.Models.Course;
 import com.codepath.skc.instantfeedback.R;
@@ -21,13 +24,15 @@ import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
 
+import org.parceler.Parcels;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
  */
-public class StreamFragment extends Fragment {
+public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseListener {
 
 
     public static final String TAG="StreamFragment";
@@ -47,7 +52,7 @@ public class StreamFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
         rvCourses=view.findViewById(R.id.rvCourses);
         allCourses=new ArrayList<>();
-        courseAdapter=new CoursesAdapter(getContext(),allCourses);
+        courseAdapter=new CoursesAdapter(getContext(),allCourses,this);
         rvCourses.setAdapter(courseAdapter);
         rvCourses.setLayoutManager(new LinearLayoutManager(getContext()));
         Log.i(TAG,"Inside Stream Fragment!");
@@ -73,5 +78,15 @@ public class StreamFragment extends Fragment {
                 courseAdapter.notifyDataSetChanged();
             }
         });
+    }
+
+    @Override
+    public void onCourseClick(int position) {
+        Course course=allCourses.get(position);
+        //Toast.makeText(MainActivity.this, "In Home", Toast.LENGTH_SHORT).show();
+        Toast.makeText(getContext(),course.getKeyCoursename(),Toast.LENGTH_SHORT).show();
+        Intent intent=new Intent(getContext(), AssignmentsActivity.class);
+        intent.putExtra("course", Parcels.wrap(course));
+        startActivity(intent);
     }
 }

@@ -4,10 +4,12 @@
 
     <item
         android:id="@+id/action_stream"
+        android:icon="@drawable/ic_action_home"
         android:title="Home"
         app:showAsAction="always" />
     <item
         android:id="@+id/action_profile"
+        android:icon="@drawable/ic_action_profile"
         android:title="Compose"
         app:showAsAction="always" />
 

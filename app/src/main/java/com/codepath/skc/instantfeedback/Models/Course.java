@@ -3,6 +3,8 @@ package com.codepath.skc.instantfeedback.Models;
 import com.parse.ParseClassName;
 import com.parse.ParseObject;
 
+import java.util.List;
+
 @ParseClassName("Course")
 
 public class Course extends ParseObject {
@@ -10,7 +12,7 @@ public class Course extends ParseObject {
     public static final String KEY_COURSENAME="CourseName";
     public static final String KEY_COURSEDESCRIPTION="CourseDescription";
     public static final String KEY_INSTRUCTOR="Insturctor";
-    
+    List<Assignment> assignments;
 
     public void setCourseName(String courseName) {
         put( KEY_COURSENAME,courseName);
@@ -34,6 +36,11 @@ public class Course extends ParseObject {
 
     public String getKeyInstructor() {
         return getString(KEY_INSTRUCTOR);
+    }
+
+    public List<Assignment> getAssignments() {
+
+        return assignments;
     }
 
 }

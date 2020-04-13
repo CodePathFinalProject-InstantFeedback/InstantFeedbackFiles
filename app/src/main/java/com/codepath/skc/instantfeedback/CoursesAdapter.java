@@ -17,18 +17,19 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
 
     private Context context;
     private List<Course> courses;
+    private OnCourseListener onCourseListener;
 
-    public CoursesAdapter(Context context, List<Course> courses){
+    public CoursesAdapter(Context context, List<Course> courses,OnCourseListener onCourseListener){
             this.context=context;
             this.courses=courses;
-
+            this.onCourseListener=onCourseListener;
     }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view= LayoutInflater.from(context).inflate(R.layout.item_stream,parent,false);
-        return new ViewHolder(view);
+        return new ViewHolder(view,onCourseListener);
     }
 
     @Override
@@ -43,17 +44,20 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
     }
 
 
-    class ViewHolder extends  RecyclerView.ViewHolder
+     class ViewHolder extends  RecyclerView.ViewHolder implements View.OnClickListener
     {
         private TextView etCourseName;
         private TextView etInstructor;
         private TextView etCourseDescription;
+        OnCourseListener onCourseListener;
 
-        public ViewHolder(@NonNull View itemView) {
+        public ViewHolder(@NonNull View itemView,OnCourseListener onCourseListener) {
             super(itemView);
             etCourseName=itemView.findViewById(R.id.etCourseName);
             etInstructor=itemView.findViewById(R.id.etInstructor);
             etCourseDescription=itemView.findViewById(R.id.etCourseDescription);
+            this.onCourseListener=onCourseListener;
+            itemView.setOnClickListener(this);
         }
 
         public void bind(Course course) {
@@ -61,8 +65,16 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
             etInstructor.setText(course.getKeyInstructor());
             etCourseDescription.setText(course.getKeyCoursedescription());
         }
+
+        @Override
+        public void onClick(View v) {
+            onCourseListener.onCourseClick(getAdapterPosition());
+        }
     }
 
+    public interface  OnCourseListener{
+        void onCourseClick(int position);
+    }
 
 
 }
