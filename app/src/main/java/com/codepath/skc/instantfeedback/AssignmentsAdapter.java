@@ -41,7 +41,7 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
         }
 
         else{
-            View view = LayoutInflater.from(context).inflate(R.layout.item_assignments, parent, false);
+            View view = LayoutInflater.from(context).inflate(R.layout.item_assignments_professor, parent, false);
             return new ViewHolder(view);
         }
     }
@@ -49,7 +49,13 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Assignment assignment=assignments.get(position);
-        holder.bind(assignment);
+        if (UserType.equals("Student")) {
+            holder.bindStudent(assignment);
+        }
+        else{
+            holder.bindProfessor(assignment);
+        }
+
     }
 
     @Override
@@ -67,15 +73,20 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
         private RatingBar etRatingBar;
         private Button etSubmitRating;
 
+        private TextView etAssignmentNameProf;
+        private  RatingBar etRatingBarProf;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             etAssignmentName = itemView.findViewById(R.id.etAssignmentName);
             etDeadline = itemView.findViewById(R.id.etDeadline);
             etRatingBar = itemView.findViewById(R.id.etratingBar);
             etSubmitRating=itemView.findViewById(R.id.etSubmitRating);
+            etAssignmentNameProf=itemView.findViewById(R.id.etAssignmentNameProf);
+            etRatingBarProf=itemView.findViewById(R.id.etratingBarProf);
         }
 
-        public void bind(final Assignment assignment) {
+        public void bindStudent(final Assignment assignment) {
             etAssignmentName.setText(assignment.getKeyAssignmentname());
             etRatingBar.setOnRatingBarChangeListener(new RatingBar.OnRatingBarChangeListener() {
                 @Override
@@ -97,6 +108,12 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
                 }
             });
 
+        }
+
+        public void bindProfessor(Assignment assignment){
+            etAssignmentNameProf.setText(assignment.getKeyAssignmentname());
+            float rating=Math.round(assignment.getKeyTotalrating()/assignment.getNumberOfRatings());
+            etRatingBarProf.setRating(rating);
         }
 
 
