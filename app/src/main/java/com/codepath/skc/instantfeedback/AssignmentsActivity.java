@@ -21,72 +21,56 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class AssignmentsActivity extends AppCompatActivity {
-    public static final String TAG="AssignmentActivity";
+    public static final String TAG = "AssignmentActivity";
+    public String objectId;
     Course course;
     RecyclerView rvAssignments;
-    List<Assignment> assignments;
+    List<Assignment> allAssignments;
     AssignmentsAdapter assignmentsAdapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_assignments);
         Intent i = getIntent();
-        course=Parcels.unwrap(i.getParcelableExtra("course"));
+        course = Parcels.unwrap(i.getParcelableExtra("course"));
         getSupportActionBar().setTitle(course.getKeyCoursename());
-        rvAssignments=findViewById(R.id.rvAssignments);
-        assignments=new ArrayList<>();
-        assignmentsAdapter=new AssignmentsAdapter(this,assignments);
+        rvAssignments = findViewById(R.id.rvAssignments);
+        allAssignments = new ArrayList<>();
+        assignmentsAdapter = new AssignmentsAdapter(this, allAssignments);
         rvAssignments.setAdapter(assignmentsAdapter);
         rvAssignments.setLayoutManager(new LinearLayoutManager(this));
-        Log.i(TAG,"Inside Stream Fragment!");
-        Assignment assignment1=new Assignment();
-        assignment1.setAssignName("Assignment 1");
-        assignment1.setDeadline("Jan 20");
-        Assignment assignment2=new Assignment();
-        assignment2.setAssignName("Assignment 2");
-        assignment2.setDeadline("Feb 20");
-        Assignment assignment3=new Assignment();
-        assignment3.setAssignName("Assignment 3");
-        assignment3.setDeadline("March 20");
-        Assignment assignment4=new Assignment();
-        assignment4.setAssignName("Assignment 4");
-        assignment4.setDeadline("April 20");
-        Assignment assignment5=new Assignment();
-        assignment5.setAssignName("Assignment 5");
-        assignment5.setDeadline("March 20");
-        assignments.add(assignment1);
-        assignments.add(assignment2);
-        assignments.add(assignment3);
-        assignments.add(assignment4);
-        assignments.add(assignment5);
-        assignmentsAdapter.notifyDataSetChanged();
+        Log.i(TAG, "Inside Assignment Fragment!");
+        queryPosts();
         //queryPosts();
     }
 
-    /*protected void queryPosts() {
-        ParseQuery<Course> query= ParseQuery.getQuery(Assignment.class);
-        //query.include(Course.KEY_USER);
-        //query.addDescendingOrder(Post.CREATED_AT);
-        query.findInBackground(new FindCallback<Course>() {
-            @Override
-            public void done(List<Course> courses, ParseException e) {
-                if (e!=null)
-                {
-                    Log.e(TAG,"Not getting Posts!",e);
-                }
+    @Override
+    public void onBackPressed() {
+        // TODO Auto-generated method stub
+        super.onBackPressed();
+        Log.i(TAG,"Back here! Update the Query!");
+        finish();
+    }
 
-                for(Course course:courses){
-                    Log.i(TAG,"CourseName:"+course.getKeyCoursename()+",Description"+course.getKeyCoursedescription());
+    protected void queryPosts() {
+        ParseQuery<Assignment> query = ParseQuery.getQuery(Assignment.class);
+        //query.include("objectId");
+        query.whereEqualTo("CoursePointer", course);
+        Log.i(TAG, course.getKeyCoursename());
+        query.findInBackground(new FindCallback<Assignment>() {
+            @Override
+            public void done(List<Assignment> assignments, ParseException e) {
+                for (Assignment assignment : assignments) {
+
+                        Log.i(TAG, assignment.getKeyAssignmentname());
+
                 }
-                assignments.addAll(courses);
-                courseAdapter.notifyDataSetChanged();
+                allAssignments.addAll(assignments);
+                assignmentsAdapter.notifyDataSetChanged();
             }
         });
     }
-    }
-
-    private void sayHello() {
-        Log.i(TAG,course.getKeyCoursename());
-        assignments=course.getAssignments();
-*/
 }
+
+

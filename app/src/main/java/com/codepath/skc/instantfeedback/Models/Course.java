@@ -12,7 +12,11 @@ public class Course extends ParseObject {
     public static final String KEY_COURSENAME="CourseName";
     public static final String KEY_COURSEDESCRIPTION="CourseDescription";
     public static final String KEY_INSTRUCTOR="Insturctor";
-    List<Assignment> assignments;
+    public static final String KEY_OBJECTID="objectId";
+
+    public String getKeyObjectid() {
+        return getString(KEY_OBJECTID);
+    }
 
     public void setCourseName(String courseName) {
         put( KEY_COURSENAME,courseName);
@@ -38,9 +42,5 @@ public class Course extends ParseObject {
         return getString(KEY_INSTRUCTOR);
     }
 
-    public List<Assignment> getAssignments() {
-
-        return assignments;
-    }
 
 }

@@ -2,6 +2,7 @@ package com.codepath.skc.instantfeedback;
 
 import android.app.Application;
 
+import com.codepath.skc.instantfeedback.Models.Assignment;
 import com.codepath.skc.instantfeedback.Models.Course;
 import com.parse.Parse;
 import com.parse.ParseObject;
@@ -12,6 +13,7 @@ public class ParseApplication extends Application {
     public void onCreate(){
         super.onCreate();
         ParseObject.registerSubclass(Course.class);
+        ParseObject.registerSubclass(Assignment.class);
         Parse.initialize(new Parse.Configuration.Builder(this)
                 .applicationId("instantfeedback") // should correspond to APP_ID env variable
                 .clientKey("CodepathMoveFastParse")  // set explicitly unless clientKey is explicitly configured on Parse server
