@@ -19,15 +19,16 @@ public class Course extends ParseObject {
     }
 
     public void setCourseName(String courseName) {
+
         put( KEY_COURSENAME,courseName);
     }
 
     public void setCourseDescription(String courseDescription) {
-        put( KEY_COURSENAME,courseDescription);
+        put(KEY_COURSEDESCRIPTION,courseDescription);
     }
 
     public void setInsturctor(String insturctor) {
-        put( KEY_COURSENAME,insturctor);
+        put(KEY_INSTRUCTOR,insturctor);
     }
 
     public String getKeyCoursename() {

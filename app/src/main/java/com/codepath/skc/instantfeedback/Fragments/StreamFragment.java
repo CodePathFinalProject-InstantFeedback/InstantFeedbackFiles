@@ -12,8 +12,12 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.SearchView;
 import android.widget.Toast;
 
 import com.codepath.skc.instantfeedback.AssignmentsActivity;
@@ -37,13 +41,15 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
 
     public static final String TAG="StreamFragment";
     RecyclerView rvCourses;
-    protected CoursesAdapter courseAdapter;
+    public CoursesAdapter courseAdapter;
     protected List<Course> allCourses;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        //super.onCreate(savedInstanceState);
+        //setHasOptionsMenu(true);
         return inflater.inflate(R.layout.fragment_stream2, container, false);
     }
 
@@ -89,4 +95,30 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
         intent.putExtra("course", Parcels.wrap(course));
         startActivity(intent);
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        Log.i(TAG,"Inside this fragment!");
+        super.onCreateOptionsMenu(menu, inflater);
+        MenuItem searchItem=menu.findItem(R.id.search);
+        SearchView searchView=(SearchView) searchItem.getActionView();
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                courseAdapter.getFilter().filter(newText);
+                return true;
+            }
+        });
+
+    }
+
+
+
+
+
 }
