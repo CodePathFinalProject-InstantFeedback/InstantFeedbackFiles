@@ -74,6 +74,7 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
         course2.setCourseDescription("Important course");
         allCourses.add(course1);
         allCourses.add(course2);*/
+        //queryPosts();
         courseAdapter = new CoursesAdapter(getContext(), allCourses, this);
         rvCourses.setAdapter(courseAdapter);
         queryPosts();
@@ -99,7 +100,7 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
                 }
                 //allCourses.addAll(courses);
                 allCourses.addAll(courses);
-                //courseAdapter.setCourses(allCourses);
+                courseAdapter.setCourses(courses);
                 courseAdapter.notifyDataSetChanged();
                 Log.i(TAG, "The courses full list is" + courseAdapter.courses);
             }
