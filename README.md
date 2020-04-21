@@ -38,8 +38,8 @@ An application for professors and mentors to see instant feedback given by stude
 * [x] Professors can add a course, and assignments within it. 
 * [x] Students can provide a rating in five stars for all the added assignment.  
 * [x] Professors can see the feedback as the average number of stars for each assignment.
-*     Students can register for the available courses. 
-*     Professor and students can view their courses.
+* [x] Students can register for the available courses. 
+* [x]  Professor and students can view their courses.
 
 
 **Optional Nice-to-have Stories**
@@ -226,6 +226,14 @@ Here's a walkthrough of implemented user stories in our first sprint.
 Here's a walkthrough of implemented user stories in our first sprint. 
 
 <img src='instantfeedbackSprint2Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+## Sprint 3
+Here's a walkthrough of implemented user stories in our first sprint. 
+
+<img src='instantfeedbackSprint3Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
 
 
 
