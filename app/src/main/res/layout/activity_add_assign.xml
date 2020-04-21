@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddActivity">
+
+    <EditText
+        android:id="@+id/adAssignmentName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="AssignmentName"
+        android:layout_weight="1"
+        />
+
+    <EditText
+        android:id="@+id/adAssignmentDeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adAssignmentName"
+        android:ems="10"
+        android:hint="Deadline?"
+        />
+
+    <EditText
+        android:id="@+id/adAssignmentDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adAssignmentDeadline"
+        android:ems="10"
+        android:hint="Description for the assignment"
+        />
+
+    <Button
+        android:id="@+id/btnAssignAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/adAssignmentDescription"
+        android:text="AddAssignment"
+        />
+
+</RelativeLayout>

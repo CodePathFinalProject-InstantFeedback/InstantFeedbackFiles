@@ -31,7 +31,12 @@ public class Assignment extends ParseObject {
     }
 
     public void setKeyAssignmentdescription(String assignmentDescription){
-        put(KEY_ASSIGNMENTNAME,assignmentDescription);
+        put(KEY_ASSIGNMENTDESCRIPTION,assignmentDescription);
+    }
+
+    public void setKeyCoursePointer(Course coursePointer)
+    {
+        put(KEY_COURSEPOINTER,coursePointer);
     }
 
     public float getKeyTotalrating() {
@@ -39,7 +44,7 @@ public class Assignment extends ParseObject {
         return getNumber(KEY_TOTALRATING).floatValue();
     }
 
-    public void setKeyAveragerating(float setRating){
+    public void setKeyTotalrating(float setRating){
         put(KEY_TOTALRATING,setRating);
     }
 

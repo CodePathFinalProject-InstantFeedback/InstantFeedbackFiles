@@ -103,7 +103,7 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
                     totalRating=currentRating+assignment.getKeyTotalrating();
                     Log.i(TAG,"The new average rating amount is"+(totalRating/newTotal));
                     assignment.setNumberOfRatings(newTotal);
-                    assignment.setKeyAveragerating(Math.round(totalRating));
+                    assignment.setKeyTotalrating(Math.round(totalRating));
                     assignment.saveInBackground();
                 }
             });

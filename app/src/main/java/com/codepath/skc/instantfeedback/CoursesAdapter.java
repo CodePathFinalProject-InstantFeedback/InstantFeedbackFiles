@@ -20,15 +20,24 @@ import java.util.List;
 public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHolder> implements Filterable {
 
     private Context context;
-    private List<Course> courses;
+    public static final String TAG = "CourseAdapter";
+    public List<Course> courses;
     private  List<Course> coursesfull;
     private OnCourseListener onCourseListener;
 
     public CoursesAdapter(Context context, List<Course> courses,OnCourseListener onCourseListener){
             this.context=context;
             this.courses=courses;
-            coursesfull=new ArrayList<>(courses);
             this.onCourseListener=onCourseListener;
+            coursesfull=new ArrayList<>(courses);
+    }
+
+    public void setCourses(List<Course> setCourses)
+    {
+        courses.clear();
+        coursesfull.clear();
+        courses.addAll(setCourses);
+        coursesfull.addAll(setCourses);
     }
 
     @NonNull
@@ -93,12 +102,13 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
             List<Course> filteredList=new ArrayList<>();
             if (constraint == null || constraint.length() == 0)
             {
+                Log.i(TAG,"From inside the filter,"+coursesfull);
                 filteredList.addAll(coursesfull);
             }
             else{
                 String filterPattern=constraint.toString().toLowerCase().trim();
                 for (Course course: coursesfull){
-                    if (course.getKeyCoursename().contains(constraint))
+                    if (course.getKeyCoursename().toLowerCase().contains(filterPattern))
                     {
                         filteredList.add(course);
                     }
@@ -114,8 +124,11 @@ public class CoursesAdapter extends RecyclerView.Adapter<CoursesAdapter.ViewHold
         protected void publishResults(CharSequence constraint, FilterResults results) {
             courses.clear();
             courses.addAll((List)results.values);
+            Log.i(TAG,"The list for coursefull is"+coursesfull);
             notifyDataSetChanged();
         }
     };
+
+
 
 }
