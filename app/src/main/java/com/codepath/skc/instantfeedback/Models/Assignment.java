@@ -12,6 +12,10 @@ public class Assignment extends ParseObject {
     public static final String KEY_ASSIGNMENTDESCRIPTION = "AssignmentDescription";
     public static final String KEY_TOTALRATING = "TotalRating";
     public static final String KEY_GETNUMBEROFRATINGS = "NumberOfRatings";
+    public static final String KEY_GETANGERVAL = "Anger";
+    public static final String KEY_GETJOYVAL = "Joy";
+    public static final String KEY_GETSADNESSVAL = "Sadness";
+    public static final String KEY_GETFEARVAL = "Fear";
 
     public void setKeyAssignmentname(String assignmentName){
         put(KEY_ASSIGNMENTNAME,assignmentName);
@@ -54,6 +58,39 @@ public class Assignment extends ParseObject {
 
     public void setNumberOfRatings(int count){
          put(KEY_GETNUMBEROFRATINGS,count);
+    }
+
+
+    public float getKeyGetangerval() {
+        return getNumber(KEY_GETANGERVAL).floatValue();
+    }
+
+    public float  getKeyGetjoyval() {
+        return getNumber(KEY_GETJOYVAL).floatValue();
+    }
+
+    public float getKeyGetsadnessval() {
+        return getNumber(KEY_GETSADNESSVAL).floatValue();
+    }
+
+    public float getKeyGetfearval() {
+        return getNumber(KEY_GETFEARVAL).floatValue();
+    }
+
+    public void setKeyangerval(float angerVal){
+        put(KEY_GETANGERVAL,angerVal);
+    }
+
+    public void setKeyjoyval(float joyVal){
+        put(KEY_GETJOYVAL,joyVal);
+    }
+
+    public void setKeysadnessval(float keysadnessVal){
+        put(KEY_GETSADNESSVAL,keysadnessVal);
+    }
+
+    public void setKeyfearval(float fearval){
+        put(KEY_GETFEARVAL,fearval);
     }
 
 }

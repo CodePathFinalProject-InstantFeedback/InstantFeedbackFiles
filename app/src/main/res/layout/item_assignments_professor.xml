@@ -14,7 +14,7 @@
         android:layout_height="wrap_content"
         tools:text="Assignment 1" />
 
-    <TextView
+    <!--<TextView
         android:id="@+id/etDeadlineProf"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,21 +23,30 @@
         android:layout_below="@+id/etAssignmentNameProf"
         android:textColor="@android:color/holo_red_dark"
         android:textStyle="italic"
-        tools:text="January 20" />
+        tools:text="January 20" /> !-->
+
 
     <RatingBar
         android:id="@+id/etratingBarProf"
         style="@style/Widget.AppCompat.RatingBar.Indicator"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/etDeadlineProf"
+        android:layout_below="@+id/etAssignmentNameProf"
         android:isIndicator="true"
         android:numStars="0"
+        />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/chart"
+        android:layout_width="match_parent"
+        android:layout_below="@+id/etratingBarProf"
+        android:layout_height="200dp"
         />
 
     <TextView
         android:id="@+id/etWhiteSpacce2"
         android:layout_width="match_parent"
+        android:layout_below="@+id/chart"
         android:layout_height="15sp" />
 
 
