@@ -39,13 +39,14 @@ An application for professors and mentors to see instant feedback given by stude
 * [x] Students can provide a rating in five stars for all the added assignment.  
 * [x] Professors can see the feedback as the average number of stars for each assignment.
 * [x] Students can register for the available courses. 
-* [x]  Professor and students can view their courses.
+* [x] Professor and students can view their courses.
+* [x] Student and Professor and search courses through the search bar. 
 
 
 **Optional Nice-to-have Stories**
 
-* Make real time graph, and charts based on student feedback.
-* Implement sentiment analysis/machine learning/NLP so that student  can provide feedback in paragraph. 
+* [x] Make real time graph, and charts based on student feedback.
+* [x] Implement sentiment analysis/machine learning/NLP so that student  can provide feedback in paragraph. 
 
 ### 2. Screen Archetypes
 
@@ -232,6 +233,12 @@ Here's a walkthrough of implemented user stories in our first sprint.
 Here's a walkthrough of implemented user stories in our first sprint. 
 
 <img src='instantfeedbackSprint3Walkthrough.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+
+
+## Sprint 3
+Here's a walkthrough of implemented user stories in our first sprint. 
+
+<img src='instantfeedbackSprint4Walkthrough 2.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 
 
