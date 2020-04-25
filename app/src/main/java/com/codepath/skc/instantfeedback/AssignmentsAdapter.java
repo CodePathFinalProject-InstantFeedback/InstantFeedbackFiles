@@ -94,15 +94,17 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
 
         @Override
         protected void onPostExecute (String result){
+                if (result.length()>0) {
                 JsonObject jsonObject = new JsonParser().parse(result).getAsJsonObject();
                 JsonArray arr = jsonObject.getAsJsonArray("keywords");
                 emotion = arr.get(0).getAsJsonObject().get("emotion").toString();
                 JsonObject jsonObjectEmotion = new JsonParser().parse(emotion).getAsJsonObject();
-                this.assignment.setKeyangerval(Float.valueOf(jsonObjectEmotion.get("anger").toString()));
-                this.assignment.setKeyfearval(Float.valueOf(jsonObjectEmotion.get("fear").toString()));
-                this.assignment.setKeysadnessval(Float.valueOf(jsonObjectEmotion.get("sadness").toString()));
-                this.assignment.setKeyjoyval(Float.valueOf(jsonObjectEmotion.get("joy").toString()));
+                this.assignment.setKeyangerval(assignment.getKeyGetangerval() + Float.valueOf(jsonObjectEmotion.get("anger").toString()));
+                this.assignment.setKeyfearval(assignment.getKeyGetfearval() + Float.valueOf(jsonObjectEmotion.get("fear").toString()));
+                this.assignment.setKeysadnessval(assignment.getKeyGetsadnessval() + Float.valueOf(jsonObjectEmotion.get("sadness").toString()));
+                this.assignment.setKeyjoyval(assignment.getKeyGetjoyval() + Float.valueOf(jsonObjectEmotion.get("joy").toString()));
                 this.assignment.saveInBackground();
+                }
         }
 
         @Override
@@ -269,10 +271,10 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
             chart.getAxisRight().setDrawGridLines(false);
             chart.getAxisRight().setDrawLabels(false);
             List<BarEntry> entries = new ArrayList<BarEntry>();
-            BarEntry bar= new BarEntry(0, assignment.getKeyGetangerval());
-            BarEntry bar2= new BarEntry(1,assignment.getKeyGetjoyval());
-            BarEntry bar3= new BarEntry(2, assignment.getKeyGetsadnessval());
-            BarEntry bar4= new BarEntry(3,assignment.getKeyGetfearval());
+            BarEntry bar= new BarEntry(0, assignment.getKeyGetangerval()/assignment.getNumberOfRatings());
+            BarEntry bar2= new BarEntry(1,assignment.getKeyGetjoyval()/assignment.getNumberOfRatings());
+            BarEntry bar3= new BarEntry(2, assignment.getKeyGetsadnessval()/assignment.getNumberOfRatings());
+            BarEntry bar4= new BarEntry(3,assignment.getKeyGetfearval()/assignment.getNumberOfRatings());
             entries.add(bar);
             entries.add(bar2);
             entries.add(bar3);
