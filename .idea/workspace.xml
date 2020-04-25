@@ -77,7 +77,7 @@
         <entry file="file://$PROJECT_DIR$/app/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
-              <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+              <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
             </state>
           </provider>
         </entry>
@@ -86,7 +86,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_assignments.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="215">
-              <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
+              <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
@@ -96,7 +96,7 @@
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_assignments_professor.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="287">
-              <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+              <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
@@ -105,8 +105,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codepath/skc/instantfeedback/AssignmentsAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1605">
-              <caret line="107" column="8" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+            <state relative-caret-position="331">
+              <caret line="106" column="51" lean-forward="true" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1859#1860#0" expanded="true" />
@@ -115,7 +115,7 @@
                 <element signature="e#3064#3065#0" expanded="true" />
                 <element signature="e#5344#5607#0" expanded="true" />
                 <element signature="e#5606#5607#0" expanded="true" />
-                <element signature="e#6530#6531#0" expanded="true" />
+                <element signature="e#6640#6641#0" expanded="true" />
                 <element signature="e#1867#1868#0" expanded="true" />
                 <element signature="e#1908#1909#0" expanded="true" />
                 <element signature="e#3040#3282#0" expanded="true" />
@@ -891,14 +891,14 @@
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="30" column="67" lean-forward="true" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
+          <caret line="30" column="67" selection-start-line="30" selection-start-column="67" selection-end-line="30" selection-end-column="67" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_assignments.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="215">
-          <caret line="38" column="25" lean-forward="true" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
+          <caret line="38" column="25" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="37" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
@@ -906,15 +906,15 @@
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/item_assignments_professor.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
-          <caret line="45" column="13" lean-forward="true" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
+          <caret line="45" column="13" selection-start-line="45" selection-start-column="13" selection-end-line="45" selection-end-column="13" />
         </state>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/codepath/skc/instantfeedback/AssignmentsAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1605">
-          <caret line="107" column="8" lean-forward="true" selection-start-line="107" selection-start-column="8" selection-end-line="107" selection-end-column="8" />
+        <state relative-caret-position="331">
+          <caret line="106" column="51" lean-forward="true" selection-start-line="106" selection-start-column="51" selection-end-line="106" selection-end-column="51" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1859#1860#0" expanded="true" />
@@ -923,7 +923,7 @@
             <element signature="e#3064#3065#0" expanded="true" />
             <element signature="e#5344#5607#0" expanded="true" />
             <element signature="e#5606#5607#0" expanded="true" />
-            <element signature="e#6530#6531#0" expanded="true" />
+            <element signature="e#6640#6641#0" expanded="true" />
             <element signature="e#1867#1868#0" expanded="true" />
             <element signature="e#1908#1909#0" expanded="true" />
             <element signature="e#3040#3282#0" expanded="true" />

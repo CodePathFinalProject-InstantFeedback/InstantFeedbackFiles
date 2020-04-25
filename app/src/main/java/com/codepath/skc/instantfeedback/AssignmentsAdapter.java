@@ -103,6 +103,7 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
                 this.assignment.setKeyfearval(assignment.getKeyGetfearval() + Float.valueOf(jsonObjectEmotion.get("fear").toString()));
                 this.assignment.setKeysadnessval(assignment.getKeyGetsadnessval() + Float.valueOf(jsonObjectEmotion.get("sadness").toString()));
                 this.assignment.setKeyjoyval(assignment.getKeyGetjoyval() + Float.valueOf(jsonObjectEmotion.get("joy").toString()));
+                Toast.makeText(getApplicationContext(), "Sucessfully Sumbitted!", Toast.LENGTH_SHORT).show();
                 this.assignment.saveInBackground();
                 }
         }
