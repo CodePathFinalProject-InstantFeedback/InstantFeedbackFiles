@@ -111,10 +111,16 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
     public void onCourseClick(int position) {
         Course course = allCourses.get(position);
         //Toast.makeText(MainActivity.this, "In Home", Toast.LENGTH_SHORT).show();
+        //if (ParseUser.getCurrentUser().get("type").equals("student")) {
         Toast.makeText(getContext(), course.getKeyCoursename(), Toast.LENGTH_SHORT).show();
         Intent intent = new Intent(getContext(), AssignmentsActivity.class);
         intent.putExtra("course", Parcels.wrap(course));
         startActivity(intent);
+        //}
+
+       /* else {
+        }*/
+
     }
 
 
@@ -130,20 +136,11 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         if (item.getItemId()==R.id.add) {
-            if (ParseUser.getCurrentUser().get("UserType").toString().toLowerCase().equals("professor"))
-            {
+
                 //Toast.makeText(this, "compose!", Toast.LENGTH_SHORT).show();
                 Intent intent=new Intent(getContext(),AddActivity.class);
                 startActivityForResult(intent,REQUEST_CODE);
                 return true;
-            }
-
-            else {
-
-                Toast.makeText(getContext(), "Student cannot add a new course! ", Toast.LENGTH_SHORT).show();
-
-            }
-
 
         }
 

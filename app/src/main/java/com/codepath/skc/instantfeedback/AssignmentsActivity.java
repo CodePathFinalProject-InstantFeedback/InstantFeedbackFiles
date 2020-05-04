@@ -95,7 +95,7 @@ public class AssignmentsActivity extends AppCompatActivity {
                 return true;
             } else {
 
-                Toast.makeText(this, "Student cannot add a new assignemtn! ", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "Student cannot add a new assignemnt! ", Toast.LENGTH_SHORT).show();
 
             }
         }
