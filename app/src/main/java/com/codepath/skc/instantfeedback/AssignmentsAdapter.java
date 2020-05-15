@@ -182,12 +182,14 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        if (UserType.toLowerCase().equals("student")) {
+       if(UserType.toLowerCase().equals("student")) {
+
             View view = LayoutInflater.from(context).inflate(R.layout.item_assignments, parent, false);
             return new ViewHolder(view);
         }
 
         else{
+
             View view = LayoutInflater.from(context).inflate(R.layout.item_assignments_professor, parent, false);
             return new ViewHolder(view);
         }
@@ -206,7 +208,8 @@ public class AssignmentsAdapter extends RecyclerView.Adapter<AssignmentsAdapter.
     }
 
     @Override
-    public int getItemCount() {
+    public int getItemCount()
+    {
         return assignments.size();
     }
 

@@ -12,7 +12,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".AssignmentProfessorActivity"></activity>
+        <activity android:name=".TabbedActivity"></activity>
         <activity android:name=".AddAssignActivity" />
         <activity android:name=".AddActivity" />
         <activity android:name=".AssignmentsActivity" />

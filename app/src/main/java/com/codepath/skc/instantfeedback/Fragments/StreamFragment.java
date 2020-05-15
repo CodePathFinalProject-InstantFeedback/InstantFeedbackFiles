@@ -25,6 +25,7 @@ import com.codepath.skc.instantfeedback.AssignmentsActivity;
 import com.codepath.skc.instantfeedback.CoursesAdapter;
 import com.codepath.skc.instantfeedback.Models.Course;
 import com.codepath.skc.instantfeedback.R;
+import com.codepath.skc.instantfeedback.TabbedActivity;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseQuery;
@@ -110,12 +111,24 @@ public class StreamFragment extends Fragment implements CoursesAdapter.OnCourseL
     @Override
     public void onCourseClick(int position) {
         Course course = allCourses.get(position);
+        String UserType=ParseUser.getCurrentUser().get("UserType").toString();
         //Toast.makeText(MainActivity.this, "In Home", Toast.LENGTH_SHORT).show();
         //if (ParseUser.getCurrentUser().get("type").equals("student")) {
         Toast.makeText(getContext(), course.getKeyCoursename(), Toast.LENGTH_SHORT).show();
-        Intent intent = new Intent(getContext(), AssignmentsActivity.class);
-        intent.putExtra("course", Parcels.wrap(course));
-        startActivity(intent);
+
+        if (UserType.toLowerCase().equals("student")) {
+            Intent intent = new Intent(getContext(), AssignmentsActivity.class);
+            intent.putExtra("course", Parcels.wrap(course));
+            startActivity(intent);
+        }
+
+        else {
+            Intent intent = new Intent(getContext(), TabbedActivity.class);
+            intent.putExtra("course", Parcels.wrap(course));
+            startActivity(intent);
+
+        }
+
         //}
 
        /* else {
