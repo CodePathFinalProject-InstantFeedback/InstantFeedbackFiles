@@ -16,6 +16,7 @@ public class Assignment extends ParseObject {
     public static final String KEY_GETJOYVAL = "Joy";
     public static final String KEY_GETSADNESSVAL = "Sadness";
     public static final String KEY_GETFEARVAL = "Fear";
+    public static final String KEY_INDEX = "indexNumber";
 
     public void setKeyAssignmentname(String assignmentName){
         put(KEY_ASSIGNMENTNAME,assignmentName);
@@ -91,6 +92,11 @@ public class Assignment extends ParseObject {
 
     public void setKeyfearval(float fearval){
         put(KEY_GETFEARVAL,fearval);
+    }
+
+    public void setKeyIndex(int index) {
+        put(KEY_INDEX,index);
+
     }
 
 }

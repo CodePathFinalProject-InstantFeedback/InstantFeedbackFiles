@@ -13,6 +13,7 @@ public class Course extends ParseObject {
     public static final String KEY_COURSEDESCRIPTION="CourseDescription";
     public static final String KEY_INSTRUCTOR="Insturctor";
     public static final String KEY_OBJECTID="objectId";
+    public int setIndex;
 
     public String getKeyObjectid() {
         return getString(KEY_OBJECTID);
@@ -41,6 +42,14 @@ public class Course extends ParseObject {
 
     public String getKeyInstructor() {
         return getString(KEY_INSTRUCTOR);
+    }
+
+    public void setKeyIndex(int index) {
+        this.setIndex=index;
+    }
+
+    public int getKeyIndex() {
+        return this.setIndex;
     }
 
 

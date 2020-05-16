@@ -51,7 +51,6 @@ public class AssignmentsActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        // TODO Auto-generated method stub
         super.onBackPressed();
         Log.i(TAG,"Back here! Update the Query!");
         finish();
@@ -61,6 +60,7 @@ public class AssignmentsActivity extends AppCompatActivity {
         ParseQuery<Assignment> query = ParseQuery.getQuery(Assignment.class);
         //query.include("objectId");
         query.whereEqualTo("CoursePointer", course);
+        query.addAscendingOrder("indexNumber");
         Log.i(TAG, course.getKeyCoursename());
         query.findInBackground(new FindCallback<Assignment>() {
             @Override

@@ -17,6 +17,7 @@ public class AddAssignActivity extends AppCompatActivity {
     EditText adAssignmentDescription;
     Button  btnAssignAdd;
     Course course;
+    int index;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,7 @@ public class AddAssignActivity extends AppCompatActivity {
         btnAssignAdd=findViewById(R.id.btnAssignAdd);
         Intent i = getIntent();
         course = Parcels.unwrap(i.getParcelableExtra("course"));
+        index=i.getIntExtra("intVal",0);
         btnAssignAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -37,6 +39,7 @@ public class AddAssignActivity extends AppCompatActivity {
                 assignment.setNumberOfRatings(0);
                 assignment.setKeyCoursePointer(course);
                 assignment.setKeyTotalrating(0);
+                assignment.setKeyIndex(index);
                 assignment.saveInBackground();
                 showToast();
 

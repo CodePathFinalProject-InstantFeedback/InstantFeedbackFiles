@@ -71,6 +71,7 @@ public class AssignmentBarChartFragment extends Fragment {
         ParseQuery<Assignment> query = ParseQuery.getQuery(Assignment.class);
         //query.include("objectId");
         query.whereEqualTo("CoursePointer", course);
+        query.addAscendingOrder("indexNumber");
         query.findInBackground(new FindCallback<Assignment>() {
             @Override
             public void done(List<Assignment> assignments, ParseException e) {

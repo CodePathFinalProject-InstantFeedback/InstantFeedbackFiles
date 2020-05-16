@@ -82,6 +82,7 @@ public class AssignmentLineChartFragment extends Fragment {
         ParseQuery<Assignment> query = ParseQuery.getQuery(Assignment.class);
         //query.include("objectId");
         query.whereEqualTo("CoursePointer", course);
+        query.addAscendingOrder("indexNumber");
         //Log.i(TAG, course.getKeyCoursename());
         query.findInBackground(new FindCallback<Assignment>() {
             @Override
@@ -112,10 +113,10 @@ public class AssignmentLineChartFragment extends Fragment {
         for (Assignment assignment: allAssignments)
         {
             Log.i(TAG,"The after udpate list is"+counter+" "+assignment.getKeyGetangerval());
-            angerEntries.add(new Entry(counter, assignment.getKeyGetangerval()));
-            joyEntries.add(new Entry(counter,assignment.getKeyGetjoyval()));
-            fearEntries.add(new Entry(counter,assignment.getKeyGetfearval()));
-            sadnessEntries.add(new Entry(counter,assignment.getKeyGetsadnessval()));
+            angerEntries.add(new Entry(counter, assignment.getKeyGetangerval()/assignment.getNumberOfRatings()));
+            joyEntries.add(new Entry(counter,assignment.getKeyGetjoyval()/assignment.getNumberOfRatings()));
+            fearEntries.add(new Entry(counter,assignment.getKeyGetfearval()/assignment.getNumberOfRatings()));
+            sadnessEntries.add(new Entry(counter,assignment.getKeyGetsadnessval()/assignment.getNumberOfRatings()));
             counter+=1;
         }
 

@@ -2,7 +2,9 @@ package com.codepath.skc.instantfeedback;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -12,7 +14,7 @@ import com.codepath.skc.instantfeedback.Models.Course;
 
 public class AddActivity extends AppCompatActivity {
 
-
+    public static final String TAG = "AddActivity ";
     EditText adCourseName;
     EditText adInsturctor;
     EditText adCourseDescription;
@@ -41,5 +43,14 @@ public class AddActivity extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent=new Intent(this,TabbedActivity.class);
+        startActivity(intent);
+        Log.i(TAG,"Back here! Update the Query!");
+        finish();
+    }
+
 
 }

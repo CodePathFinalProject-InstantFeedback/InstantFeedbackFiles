@@ -49,7 +49,8 @@
                                               <map>
                                                 <entry key="color" value="000000" />
                                                 <entry key="opacityPercent" value="80" />
-                                                <entry key="paddingPercent" value="30" />
+                                                <entry key="paddingPercent" value="10" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -71,9 +72,10 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="imageAsset" value="$PROJECT_DIR$/../../add.png" />
+                                      <entry key="assetType" value="IMAGE" />
+                                      <entry key="imageAsset" value="$PROJECT_DIR$/../../rating.jpg" />
                                       <entry key="outputName" value="ic_action_search" />
-                                      <entry key="theme" value="HOLO_DARK" />
+                                      <entry key="theme" value="CUSTOM" />
                                       <entry key="themeColor" value="ffffff" />
                                     </map>
                                   </option>
@@ -91,11 +93,18 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="99" />
                                               </map>
                                             </option>
                                           </PersistentState>
                                         </value>
                                       </entry>
+                                    </map>
+                                  </option>
+                                  <option name="values">
+                                    <map>
+                                      <entry key="foregroundImage" value="$PROJECT_DIR$/../../rating.jpg" />
+                                      <entry key="outputName" value="ic_rating_icon" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -143,11 +152,6 @@
                                 </PersistentState>
                               </value>
                             </entry>
-                          </map>
-                        </option>
-                        <option name="values">
-                          <map>
-                            <entry key="outputIconType" value="ACTIONBAR" />
                           </map>
                         </option>
                       </PersistentState>
